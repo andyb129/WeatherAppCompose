@@ -13,11 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package uk.co.barbuzz.weathercompose.model
 
-import androidx.compose.ui.graphics.Color
-
-val purple200 = Color(0xFFBB86FC)
-val purple500 = Color(0xFF6200EE)
-val purple700 = Color(0xFF3700B3)
-val teal200 = Color(0xFF03DAC5)
+data class WeatherHour(
+    val timeText: String,
+    val tempText: String,
+    val weatherText: String,
+    val windText: String,
+    val weatherResourceId: Int
+)

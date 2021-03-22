@@ -13,19 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge
+package uk.co.barbuzz.weathercompose
 
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.compose.setContent
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.androiddevchallenge.ui.theme.MyTheme
+import uk.co.barbuzz.weathercompose.composables.AppBarScaffold
+import uk.co.barbuzz.weathercompose.composables.MainScreen
+import uk.co.barbuzz.weathercompose.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
+    @ExperimentalAnimationApi
+    @ExperimentalFoundationApi
+    @ExperimentalMaterialApi
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -37,13 +47,23 @@ class MainActivity : AppCompatActivity() {
 }
 
 // Start building your app here!
+@ExperimentalAnimationApi
+@ExperimentalFoundationApi
+@ExperimentalMaterialApi
+@RequiresApi(Build.VERSION_CODES.N)
 @Composable
 fun MyApp() {
     Surface(color = MaterialTheme.colors.background) {
-        Text(text = "Ready... Set... GO!")
+        AppBarScaffold("Bristol, UK") {
+            MainScreen()
+        }
     }
 }
 
+@ExperimentalAnimationApi
+@ExperimentalFoundationApi
+@ExperimentalMaterialApi
+@RequiresApi(Build.VERSION_CODES.N)
 @Preview("Light Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun LightPreview() {
@@ -52,6 +72,10 @@ fun LightPreview() {
     }
 }
 
+@ExperimentalAnimationApi
+@ExperimentalFoundationApi
+@ExperimentalMaterialApi
+@RequiresApi(Build.VERSION_CODES.N)
 @Preview("Dark Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun DarkPreview() {

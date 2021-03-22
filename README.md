@@ -1,27 +1,27 @@
-# Template repository
+# Weather App Compose
 
-Template repository for the Jetpack Compose [#AndroidDevChallenge](https://developer.android.com/dev-challenge).
+![Workflow result](https://github.com/andyb129/WeatherAppCompose/workflows/Check/badge.svg)
 
-## Getting started
-Copy this repository by pressing the "Use this template" button in Github.
-Clone your repository and open it in the latest [Android Studio (Canary build)](https://developer.android.com/studio/preview).
+## :scroll: Description
+Weather app UI in compose inspired by this design - https://dribbble.com/shots/1824088-GIF-for-the-Weather-App
 
-## Submission requirements
-- Follow the challenge description on the project website: [developer.android.com/dev-challenge](https://developer.android.com/dev-challenge)
-- All UI should be written using Jetpack Compose
-- The Github Actions workflow should complete successfully
-- Include two screenshots of your submission in the [results](results) folder. The names should be
-  screenshot_1.png and screenshot_2.png.
-- Include a screen record of your submission in the [results](results) folder. The name should be
-  video.mp4
-- Replace the contents of [README.md](README.md) with the contents of [README-template.md](README-template.md) and fill out the template.
 
-## Code formatting
-The CI uses [Spotless](https://github.com/diffplug/spotless) to check if your code is formatted correctly and contains the right licenses.
-Internally, Spotless uses [ktlint](https://github.com/pinterest/ktlint) to check the formatting of your code.
-To set up ktlint correctly with Android Studio, follow one of the [listed setup options](https://github.com/pinterest/ktlint#-with-intellij-idea).
+## :bulb: Motivation and Context
+My submission for the 4th week in the Compose Android Dev Challenge [#AndroidDevChallenge](https://developer.android.com/dev-challenge)
 
-Before committing your code, run `./gradlew app:spotlessApply` to automatically format your code.
+This was a tough final challenge, but as I didn't have much time this week I only managed to hack together a basic weather screen
+ with a few glitches :-)
+
+ List for further improvement includes
+ - Hoist state out of main composable
+ - work out further animations for weather icons
+ - figure out a better way to implement expanding rows in a list
+ - apply theming and dark mode
+
+## :camera_flash: Screenshots
+<img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
+
+<img src="/results/video_weather.gif" width="260">
 
 ## License
 ```
